@@ -433,6 +433,7 @@ html {
   .info-card .precio {
       font-size: 18px;
       margin-top: 10px;
+      align-items: center;
   }
   .info-card .precio span {
       font-weight: 700;
@@ -810,4 +811,25 @@ html {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+  }
+  .flex {
+    display: flex;
+    align-items:center;
+  }
+  .paddingLogo{
+    padding-right: 4px;
+  }
+  .numeroCarrito {
+    color: white;
+    font-size: 2rem;
+  }
+  .flexTotalCarrito {
+    display: flex;
+    justify-content: space-between;
+    font-size: 3rem;
+  }
+  .containerCarrito{
+    border: 2px solid black;
+    border-radius: 10%;
+
   }

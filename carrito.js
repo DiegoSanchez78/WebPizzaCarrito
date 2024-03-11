@@ -3,6 +3,8 @@ const pizzas = document.getElementById('lista-pizzas');
 const listapizzas = document.querySelector('#lista-carrito tbody')
 const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');
 const totalCarrito = document.querySelector('#total');
+const contadorProductos = document.getElementById("cart-count");
+
 
 eventslisteners();
 
@@ -21,6 +23,7 @@ function eventslisteners()
 function calcularTotal() {
     const pizzas = obtenerpizzasLocalStorage();
     let total = 0;
+    
   
     pizzas.forEach((pizza) => {
       total += parseInt(pizza.precio) 
@@ -31,7 +34,10 @@ function calcularTotal() {
     return total;
   }
  
-  
+//   function cantidadProductos() {
+//     const pizzas = obtenerpizzasLocalStorage(); 
+//     let total = 0;
+//   }
 
 function comprarpizza(e) 
 {
@@ -159,6 +165,13 @@ function actualizarImporte() {
     const total = calcularTotal(pizzas);
   
     document.getElementById('total').innerHTML = total;
+    if (total > 0) {
+        contadorProductos.style.display = "block";
+        document.getElementById("cart-count").innerHTML = obtenerpizzasLocalStorage().length;
+      } else {
+        contadorProductos.style.display = "none";
+      }
+    // document.getElementById("cart-count").innerHTML = obtenerpizzasLocalStorage().length;
     
   }
   actualizarImporte()

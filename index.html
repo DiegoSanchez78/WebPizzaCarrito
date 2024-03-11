@@ -8,16 +8,19 @@
 </head>
 <body>
     <header id="header" class="header">
-        <div class="container">
+        <div class="container  ">
             <div class="row">
                 <div class="four columns">
                   <img src="assest/logoPizza.png" alt="logo"width="80">
                 </div>
                 <div class="two columns u-pull-right">
                     <ul>
-                        <li class="submenu">
-                                <img src="/assest/shopping-cart.svg" width="40" id="img-carrito">
-                                <div id="carrito">
+                        <li class="submenu ">
+                            <div class="flex">
+                                <img src="/assest/shopping-cart.svg" width="40" id="img-carrito"class="paddingLogo">
+                                <span class="cart-count numeroCarrito  " id="cart-count"></span>
+                            </div>
+                                <div id="carrito"class="containerCarrito">
                                         
                                         <table id="lista-carrito" class="u-full-width">
                                             <thead>
@@ -32,8 +35,10 @@
                                         </table>
     
                                         <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
-                                        <p id="total-carrito"> Total</p>
-                                        <span id="total"> ${total}</span>
+                                        <div class="flexTotalCarrito">
+                                            <p id="total-carrito"> Total:</p>
+                                            <span id="total"> `$$ {total}`</span>
+                                        </div>
                                 </div>
                         </li>
                     </ul>
@@ -98,8 +103,8 @@
                             class="imagen-pizza u-full-width">
                         <div class="info-card">
                             <div class="flexTitulo">
-                                <h4>Huerto</h4>
-                                <p class="precio">$<span class="u-pull-right ">$2700</span></p>
+                                <h4>Napolitana</h4>
+                                <p class="precio">$<span class="u-pull-right ">2700</span></p>
                             </div>
                             <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="4">Agregar Al
                                 Carrito</a>
